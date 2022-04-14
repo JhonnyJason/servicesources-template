@@ -1,6 +1,6 @@
-import configmodule from "./configmodule"
-import debugmodule from "./debugmodule"
-import startupmodule from "./startupmodule"
+import *  as configmodule from "./configmodule"
+import * as debugmodule from "./debugmodule"
+import * as startupmodule from "./startupmodule"
 
 Modules = {
     configmodule,

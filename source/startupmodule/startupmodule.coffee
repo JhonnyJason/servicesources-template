@@ -1,18 +1,12 @@
-
-startupmodule = {name: "startupmodule"}
 ############################################################
-log = (arg) ->
-    if allModules.debugmodule.modulesToDebug["startupmodule"]?  then console.log "[startupmodule]: " + arg
+sci = null
+
+############################################################
+export initialize = ->
+    sci = allModules.scimodule
     return
 
 ############################################################
-startupmodule.initialize = () ->
-    log "startupmodule.initialize"
+export serviceStartup = ->
+    sci.prepareAndExpose()
     return
-
-############################################################
-startupmodule.serviceStartup = ->
-    log "startupmodule.serviceStartup"
-    return
-
-export default startupmodule
