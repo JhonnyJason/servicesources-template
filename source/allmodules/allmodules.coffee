@@ -6,6 +6,7 @@ import * as startupmodule from "./startupmodule"
 Modules = {
     configmodule,
     debugmodule,
+    scimodule,
     startupmodule,
 }
 
