@@ -1,4 +1,9 @@
+import { addModulesToDebug } from "thingy-debug"
+
 ############################################################
-export modulesToDebug = 
-    unbreaker: true
-    # scimodule: true
+modulesToDebug = {
+    scimodule: true
+    startupmodule: true
+}
+
+addModulesToDebug(modulesToDebug)
