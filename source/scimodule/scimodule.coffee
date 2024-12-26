@@ -22,7 +22,8 @@ routes["sampleRoute"] = (res, req) ->
     
 ############################################################
 export prepareAndExpose = ->
-    log "scimodule.prepareAndExpose"
+    log "prepareAndExpose"
     # handlers.setService(this)
     sciBase.prepareAndExpose(null, routes)
+    log "Server listening!"
     return
