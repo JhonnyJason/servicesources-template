@@ -1,11 +1,7 @@
 ############################################################
-#region printLogFunctions
-log = (arg) ->
-    if allModules.debugmodule.modulesToDebug["scimodule"]?  then console.log "[scimodule]: " + arg
-    return
-ostr = (obj) -> JSON.stringify(obj, null, 4)
-olog = (obj) -> log "\n" + ostr(obj)
-print = (arg) -> console.log(arg)
+#region debug
+import { createLogFunctions } from "thingy-debug"
+{log, olog} = createLogFunctions("scimodule")
 #endregion
 
 ############################################################
@@ -16,11 +12,17 @@ import * as sciBase from "thingy-sci-base"
 #endregion
 
 ############################################################
+routes = {}
+
+routes["sampleRoute"] = (res, req) ->
+    # req.body is our json
+    # handle
+    res.send("Hello World!")
+
+    
+############################################################
 export prepareAndExpose = ->
     log "scimodule.prepareAndExpose"
     # handlers.setService(this)
-    # sciBase.prepareAndExpose(authenticate, routes)
+    sciBase.prepareAndExpose(null, routes)
     return
-
-############################################################
-# authenticate = 
