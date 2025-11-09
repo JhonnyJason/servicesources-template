@@ -6,9 +6,7 @@ import { createLogFunctions } from "thingy-debug"
 
 ############################################################
 #region modules from the Environment
-import * as sciBase from "thingy-sci-base"
-# import * as routes from ""
-# import * as handlers from ""
+## import * as sciBase from "thingy-sci-base"
 #endregion
 
 ############################################################
@@ -23,7 +21,7 @@ routes["sampleRoute"] = (res, req) ->
 ############################################################
 export prepareAndExpose = ->
     log "prepareAndExpose"
-    # handlers.setService(this)
-    sciBase.prepareAndExpose(null, routes)
-    log "Server listening!"
+    
+    ## sciBase.prepareAndExpose(null, routes)
+    ## log "Server listening!"
     return
